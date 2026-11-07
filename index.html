@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>香港政府部門指南｜各局做甚麼・市民必知服務</title>
-<meta name="description" content="一次看懂香港特別行政區政府 15 個政策局與主要部門的工作，以及市民日常最實用的政府服務、收費、熱線與求助方法。">
+<meta name="description" content="一次看懂香港特別行政區政府 15 個政策局與 91 個部門及法定機構的主要工作，以及市民日常最實用的政府服務、收費、熱線與求助方法。">
 <meta name="theme-color" content="#0e2438">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,7 @@
     <div class="wrap">
       <p class="eyebrow">2026 年版・非官方整理</p>
       <h1>香港政府做緊咩？<br><span class="accent">一個網站睇清楚</span></h1>
-      <p class="lede">15 個政策局、70 多個部門，其實同你每日生活都有關。由申請護照、報稅、睇醫生，到樓上漏水、被電話詐騙，這份指南幫你搵到「應該搵邊個」。</p>
+      <p class="lede">15 個政策局、九十多個部門及機構，其實同你每日生活都有關。由申請護照、報稅、睇醫生，到樓上漏水、被電話詐騙，這份指南幫你搵到「應該搵邊個」。</p>
 
       <div class="search-box">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -63,7 +63,7 @@
 
       <div class="stats" aria-label="政府概況數字">
         <div class="stat"><b data-count="15">15</b><span>個政策局</span></div>
-        <div class="stat"><b data-count="70" data-suffix="+">70+</b><span>個部門及機構</span></div>
+        <div class="stat"><b id="deptStat">91</b><span>個部門及機構</span></div>
         <div class="stat"><b data-count="170000" data-format="wan">17 萬</b><span>名公務員</span></div>
         <div class="stat"><b data-count="23">23</b><span>個 1823 參與部門</span></div>
       </div>
@@ -142,7 +142,7 @@
       <div class="section-head">
         <span class="num">03</span>
         <h2>部門速查：咩事搵邊個</h2>
-        <p>按範疇篩選，或直接搜尋。每個部門都列出「市民幾時會用到」及官方連結。</p>
+        <p>91 個部門及法定機構，按範疇篩選或直接搜尋；每張卡列出主要工作、市民幾時會用到，以及官方連結。</p>
       </div>
       <div class="filter-bar" id="deptFilters" role="group" aria-label="按範疇篩選部門">
         <button class="filter active" data-filter="all">全部</button>
@@ -156,8 +156,10 @@
         <button class="filter" data-filter="education">教育</button>
         <button class="filter" data-filter="environment">環境食物</button>
         <button class="filter" data-filter="culture">康文郵政</button>
-        <button class="filter" data-filter="oversight">監察・其他</button>
+        <button class="filter" data-filter="oversight">監察・申訴</button>
+        <button class="filter" data-filter="agency">法定機構</button>
       </div>
+      <p class="result-count" id="deptCount" aria-live="polite"></p>
       <div class="dept-grid" id="deptGrid"><!-- injected --></div>
       <p class="empty" id="deptEmpty" hidden>搵唔到相關部門，試試「護照」、「報稅」、「漏水」等字眼。</p>
     </div>
