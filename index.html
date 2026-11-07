@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>香港政府部門指南｜各局做甚麼・市民必知服務</title>
+<meta name="description" content="一次看懂香港特別行政區政府 15 個政策局與主要部門的工作，以及市民日常最實用的政府服務、收費、熱線與求助方法。">
+<meta name="theme-color" content="#0e2438">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230e2438'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23f6f3ec' font-family='serif'>港</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">港</span>
+      <span class="brand-text">
+        <strong>香港政府部門指南</strong>
+        <small>HK Government Guide</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="#structure">架構</a>
+      <a href="#bureaus">政策局</a>
+      <a href="#departments">部門</a>
+      <a href="#citizen">市民必知</a>
+      <a href="#faq">常見問題</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" aria-label="切換深色模式" title="切換深色模式">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">2026 年版・非官方整理</p>
+      <h1>香港政府做緊咩？<br><span class="accent">一個網站睇清楚</span></h1>
+      <p class="lede">15 個政策局、70 多個部門，其實同你每日生活都有關。由申請護照、報稅、睇醫生，到樓上漏水、被電話詐騙，這份指南幫你搵到「應該搵邊個」。</p>
+
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="heroSearch" type="search" placeholder="搜尋部門或服務，例如：護照、報稅、公屋、急症室" aria-label="搜尋部門或服務" autocomplete="off">
+        <kbd>/</kbd>
+      </div>
+      <div class="chips quick-chips" id="quickChips">
+        <button data-q="護照">特區護照</button>
+        <button data-q="報稅">報稅</button>
+        <button data-q="公屋">公屋</button>
+        <button data-q="急症">急症室</button>
+        <button data-q="漏水">樓上漏水</button>
+        <button data-q="詐騙">電話詐騙</button>
+      </div>
+
+      <div class="stats" aria-label="政府概況數字">
+        <div class="stat"><b data-count="15">15</b><span>個政策局</span></div>
+        <div class="stat"><b data-count="70" data-suffix="+">70+</b><span>個部門及機構</span></div>
+        <div class="stat"><b data-count="170000" data-format="wan">17 萬</b><span>名公務員</span></div>
+        <div class="stat"><b data-count="23">23</b><span>個 1823 參與部門</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUCTURE -->
+  <section class="section" id="structure">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">01</span>
+        <h2>政府架構：三司十五局</h2>
+        <p>行政長官領導特區政府；三名司長分管政策統籌，十五個決策局負責制定政策，部門則負責執行及提供服務。</p>
+      </div>
+
+      <div class="org">
+        <div class="org-row org-top">
+          <div class="org-node node-ceo">
+            <span class="node-tag">首長</span>
+            <strong>行政長官</strong>
+            <small>領導特區政府・由行政會議協助</small>
+          </div>
+        </div>
+        <div class="org-line" aria-hidden="true"></div>
+        <div class="org-row org-three">
+          <div class="org-node node-sec"><strong>政務司司長</strong><small>地區行政・青年・扶貧統籌</small></div>
+          <div class="org-node node-sec"><strong>財政司司長</strong><small>經濟・財政・金融</small></div>
+          <div class="org-node node-sec"><strong>律政司司長</strong><small>法律政策・檢控</small></div>
+        </div>
+        <div class="org-line" aria-hidden="true"></div>
+        <div class="org-row org-bureaus" id="orgBureaus"><!-- injected --></div>
+        <div class="org-line" aria-hidden="true"></div>
+        <div class="org-node node-dept">
+          <strong>各執行部門及法定機構</strong>
+          <small>警務處、入境處、稅務局、屋宇署、醫院管理局等，直接向市民提供服務</small>
+        </div>
+      </div>
+
+      <div class="note-grid">
+        <div class="note-card">
+          <h3>局 vs 署，有咩分別？</h3>
+          <p><b>決策局</b>負責「想」——制定政策、立法、爭取資源；<b>部門</b>負責「做」——發牌、執法、提供服務。例如房屋局制定房屋政策，房屋署負責執行及管理公共屋邨。</p>
+        </div>
+        <div class="note-card">
+          <h3>仲有獨立機構</h3>
+          <p>廉政公署、申訴專員公署、審計署、平機會、私隱專員公署等並不由政策局管轄，直接向行政長官或立法會負責，角色是監察政府。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUREAUS -->
+  <section class="section alt" id="bureaus">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">02</span>
+        <h2>十五個政策局，各自做甚麼</h2>
+        <p>點擊卡片展開：負責範圍、轄下主要部門、以及市民最常使用的服務。</p>
+      </div>
+      <div class="filter-bar" id="bureauFilters" role="group" aria-label="按範疇篩選政策局">
+        <button class="filter active" data-filter="all">全部</button>
+        <button class="filter" data-filter="life">民生</button>
+        <button class="filter" data-filter="money">經濟財稅</button>
+        <button class="filter" data-filter="city">城市發展</button>
+        <button class="filter" data-filter="social">社會服務</button>
+        <button class="filter" data-filter="governance">政府運作</button>
+      </div>
+      <div class="bureau-grid" id="bureauGrid"><!-- injected --></div>
+      <p class="empty" id="bureauEmpty" hidden>搵唔到相關政策局，試試其他關鍵字。</p>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS -->
+  <section class="section" id="departments">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">03</span>
+        <h2>部門速查：咩事搵邊個</h2>
+        <p>按範疇篩選，或直接搜尋。每個部門都列出「市民幾時會用到」及官方連結。</p>
+      </div>
+      <div class="filter-bar" id="deptFilters" role="group" aria-label="按範疇篩選部門">
+        <button class="filter active" data-filter="all">全部</button>
+        <button class="filter" data-filter="identity">身份・出入境</button>
+        <button class="filter" data-filter="health">醫療衞生</button>
+        <button class="filter" data-filter="housing">房屋土地</button>
+        <button class="filter" data-filter="transport">交通運輸</button>
+        <button class="filter" data-filter="safety">治安消防</button>
+        <button class="filter" data-filter="money">稅務金融</button>
+        <button class="filter" data-filter="welfare">勞工福利</button>
+        <button class="filter" data-filter="education">教育</button>
+        <button class="filter" data-filter="environment">環境食物</button>
+        <button class="filter" data-filter="culture">康文郵政</button>
+        <button class="filter" data-filter="oversight">監察・其他</button>
+      </div>
+      <div class="dept-grid" id="deptGrid"><!-- injected --></div>
+      <p class="empty" id="deptEmpty" hidden>搵唔到相關部門，試試「護照」、「報稅」、「漏水」等字眼。</p>
+    </div>
+  </section>
+
+  <!-- CITIZEN -->
+  <section class="section alt" id="citizen">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">04</span>
+        <h2>市民必知</h2>
+        <p>唔需要記住整個政府，只要記住以下幾組號碼、幾件事。</p>
+      </div>
+
+      <h3 class="subhead">四個一定要識的號碼</h3>
+      <div class="hotline-grid">
+        <a class="hotline urgent" href="tel:999">
+          <span class="hl-num">999</span>
+          <strong>緊急求助</strong>
+          <p>火警、救護車、警察。有人受傷、有即時危險，先打 999。</p>
+          <span class="hl-tag">24 小時</span>
+        </a>
+        <a class="hotline" href="tel:1823">
+          <span class="hl-num">1823</span>
+          <strong>政府一站式查詢・投訴</strong>
+          <p>23 個部門的查詢、投訴、建議，唔知搵邊個就打呢個。</p>
+          <span class="hl-tag">24 小時</span>
+        </a>
+        <a class="hotline" href="tel:18222">
+          <span class="hl-num">18222</span>
+          <strong>反詐騙協調中心</strong>
+          <p>懷疑被騙、收到可疑來電或短訊，即刻打去查證。</p>
+          <span class="hl-tag">24 小時</span>
+        </a>
+        <a class="hotline" href="https://www.1823.gov.hk/tc/" target="_blank" rel="noopener">
+          <span class="hl-num">App</span>
+          <strong>「Tell me@1823」</strong>
+          <p>用手機影相投訴，例如垃圾堆積、道路損毀，可追蹤個案。</p>
+          <span class="hl-tag">流動應用程式</span>
+        </a>
+      </div>
+
+      <h3 class="subhead">人生大事：幾時要搵政府</h3>
+      <div class="timeline" id="timeline"><!-- injected --></div>
+
+      <h3 class="subhead">常用收費速查</h3>
+      <p class="table-note">以下為 2026 年 11 月查核的主要收費，實際金額以政府最新公布為準。</p>
+      <div class="table-wrap">
+        <table class="fee-table">
+          <thead>
+            <tr><th>項目</th><th>收費</th><th>負責部門</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>特區護照（16 歲或以上，10 年）</td><td>32 頁 $430／48 頁 $520</td><td>入境事務處</td></tr>
+            <tr><td>特區護照（16 歲以下，5 年）</td><td>32 頁 $215／48 頁 $260</td><td>入境事務處</td></tr>
+            <tr><td>補領身份證（遺失或損壞）</td><td>$370</td><td>入境事務處</td></tr>
+            <tr><td>出生登記（42 天內）</td><td>免費</td><td>入境事務處</td></tr>
+            <tr><td>擬結婚通知書／登記處行禮</td><td>$305／$715</td><td>入境事務處</td></tr>
+            <tr><td>公立醫院急症室</td><td>每次 $400（危殆、危急病人免費）</td><td>醫院管理局</td></tr>
+            <tr><td>專科門診</td><td>每次 $250</td><td>醫院管理局</td></tr>
+            <tr><td>住院（急症病床）</td><td>每日 $300</td><td>醫院管理局</td></tr>
+            <tr><td>薪俸稅</td><td>累進 2%／6%／10%／14%／17%；標準稅率首 $500 萬 15%，其後 16%</td><td>稅務局</td></tr>
+            <tr><td>法定最低工資</td><td>每小時 $43.1（2026 年 5 月 1 日起）</td><td>勞工處</td></tr>
+            <tr><td>高齡津貼（生果金）</td><td>每月 $1,675</td><td>社會福利署</td></tr>
+            <tr><td>長者生活津貼</td><td>每月 $4,345</td><td>社會福利署</td></tr>
+            <tr><td>強制性公積金</td><td>僱主、僱員各 5%；月入上限 $30,000（各最多 $1,500）</td><td>積金局</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="smart-card">
+        <div>
+          <h3>一個 App 搞掂身份認證：智方便</h3>
+          <p>「智方便」（iAM Smart）是政府的數碼身份平台，可用於報稅、續車牌、申請公屋、查閱強積金、電子健康紀錄等過百項服務。分「智方便」及「智方便＋」兩個版本，後者具數碼簽署功能。</p>
+          <a class="btn" href="https://www.iamsmart.gov.hk/tc/" target="_blank" rel="noopener">了解智方便</a>
+        </div>
+        <ul class="smart-list">
+          <li><b>GovHK 一站通</b>：按「人生階段」搵政府服務</li>
+          <li><b>1823</b>：唔知搵邊個部門時的入口</li>
+          <li><b>防騙視伏器</b>：查可疑電話、戶口、網址</li>
+          <li><b>資料一線通</b>：政府開放數據</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">05</span>
+        <h2>常見情境：應該點做</h2>
+        <p>十個香港人最常遇到的情況，直接告訴你步驟與負責部門。</p>
+      </div>
+      <div class="faq" id="faqList"><!-- injected --></div>
+
+      <div class="sources">
+        <h3>資料來源</h3>
+        <ul>
+          <li><a href="https://www.gov.hk/tc/about/govdirectory/govstructure.htm" target="_blank" rel="noopener">GovHK 政府架構</a>及<a href="https://www.gov.hk/tc/about/govdirectory/govwebsite/index.htm" target="_blank" rel="noopener">政府部門及有關機構網站</a></li>
+          <li><a href="https://www.1823.gov.hk/tc/" target="_blank" rel="noopener">1823 常見問題</a>（收費、津貼金額）</li>
+          <li><a href="https://www.immd.gov.hk/hkt/services/fee-tables/" target="_blank" rel="noopener">入境事務處收費表</a></li>
+          <li><a href="https://www.ha.org.hk/" target="_blank" rel="noopener">醫院管理局</a>公營醫療收費改革（2026 年 1 月 1 日生效）</li>
+          <li><a href="https://www.gov.hk/tc/residents/taxes/taxfiling/taxrates/salariesrates.htm" target="_blank" rel="noopener">稅務局薪俸稅率</a>、<a href="https://www.mwc.org.hk/tc/" target="_blank" rel="noopener">最低工資委員會</a>、<a href="https://www.swd.gov.hk/tc/pubsvc/socsecu/ssallowance/" target="_blank" rel="noopener">社會福利署公共福利金</a></li>
+        </ul>
+        <p class="disclaimer">本網站為民間整理，並非政府官方網站。內容力求準確，但政策、收費及服務安排可能隨時更新，辦理前請以相關部門官方公布為準。最後更新：2026 年 11 月。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <strong>香港政府部門指南</strong>
+      <p>寫給每一個需要同政府打交道的人。</p>
+    </div>
+    <div class="footer-links">
+      <a href="#top">回到頂部</a>
+      <a href="https://www.gov.hk/tc/" target="_blank" rel="noopener">GovHK</a>
+      <a href="https://www.1823.gov.hk/tc/" target="_blank" rel="noopener">1823</a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到頂部">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5v14M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="app.js"></script>
+</body>
+</html>
