@@ -341,6 +341,36 @@ const CAT_LABEL = {
   culture: "康文郵政", oversight: "監察・其他"
 };
 
+
+/* 搜尋用的額外關鍵字：市民慣用語 → 對應部門 */
+const KEYWORDS = {
+  "入境事務處": "護照 特區護照 身份證 出生登記 結婚 婚姻註冊 簽證 旅行證件 回鄉",
+  "房屋署": "公屋 居屋 綠置居 上樓 輪候 租金 屋邨 簡約公屋",
+  "屋宇署": "漏水 滲水 僭建 驗樓 驗窗 危樓 裝修 樓宇安全",
+  "食物環境衞生署": "垃圾 鼠患 蚊患 食肆 街市 小販 衛生 黑點 漏水",
+  "水務署": "水費 爆水管 供水 鹹水 沖廁水 漏水",
+  "環境保護署": "噪音 裝修噪音 空氣污染 回收 廢物 排污",
+  "香港警務處": "報案 詐騙 被騙 失蹤 交通意外 盜竊 騙案 防騙",
+  "稅務局": "報稅 交稅 退稅 薪俸稅 利得稅 印花稅 厘印 報稅表",
+  "運輸署": "車牌 駕駛執照 考車 續牌 國際車牌 車輛過戶 泊車 易通行",
+  "勞工處": "拖糧 欠薪 追薪 工傷 就業 搵工 裁員 解僱 最低工資 勞資",
+  "社會福利署": "綜援 生果金 長者津貼 傷殘津貼 低收入 援助",
+  "教育局": "派位 插班 學位 校網 幼稚園 中小學 教師",
+  "醫院管理局": "急症 急症室 專科 住院 睇醫生 覆診 醫院",
+  "衞生署": "疫苗 打針 健康檢查 吸煙 控煙 診所",
+  "消防處": "火警 救護車 救護 消防救援 防火",
+  "香港海關": "冒牌 假貨 商品說明 不良營商 走私",
+  "康樂及文化事務署": "圖書館 借書 泳池 體育館 訂場 博物館 公園",
+  "民政事務總署": "法團 大廈管理 業主立案法團 地區 牌照",
+  "差餉物業估價署": "差餉 地租 物業估價",
+  "地政總署": "地契 地稅 土地 收地 界址",
+  "公司註冊處": "開公司 公司查冊 周年申報",
+  "香港天文台": "颱風 打風 暴雨 黑雨 天氣 氣溫 警告",
+  "申訴專員公署": "投訴 行政失當 不滿",
+  "廉政公署": "貪污 行賄 舉報",
+  "消費者委員會": "消委會 退款 貨不對辦 投訴商戶"
+};
+
 const state = { q: "", bureau: "all", dept: "all" };
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => Array.from(el.querySelectorAll(sel));
@@ -464,7 +494,7 @@ function applyFilters() {
   let bCount = 0;
   $$(".bureau").forEach(card => {
     const b = BUREAUS.find(x => x.id === card.dataset.id);
-    const hay = norm([b.name, b.en, b.duty, b.focus.join(""), b.depts.join("")].join(" "));
+    const hay = norm([b.name, b.en, b.duty, b.focus.join(""), b.depts.join(""), b.tip.text].join(" "));
     const okQ = !q || hay.includes(q);
     const okG = state.bureau === "all" || card.dataset.group === state.bureau;
     const show = okQ && okG;
@@ -479,7 +509,7 @@ function applyFilters() {
   $$(".dept").forEach(card => {
     const d = DEPTS.find(x => x.name === card.dataset.name);
     if (!d) return;
-    const hay = norm([d.name, d.en, d.duty, d.when, d.bureau].join(" "));
+    const hay = norm([d.name, d.en, d.duty, d.when, d.bureau, KEYWORDS[d.name] || ""].join(" "));
     const okQ = !q || hay.includes(q);
     const okC = state.dept === "all" || d.cat === state.dept;
     const show = okQ && okC;
